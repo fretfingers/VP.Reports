@@ -1,0 +1,207 @@
+@{
+    Layout = null;
+    ViewData["Title"] = "Vintage Payroll";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="Smarthr - Bootstrap Admin Template">
+    <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
+    <meta name="author" content="Dreamguys - Bootstrap Admin Template">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Login - Vintage Payroll Manager</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/Content/assets/css/bootstrap.min.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="~/Content/assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="~/Content/assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="~/Content/assets/css/material.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="~/Content/assets/css/style.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        /*#homeBtn {
+            border-width: 2px;
+            font-weight: bold;
+            border-radius: 8px !important;
+        }*/
+
+        .disabled {
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .loginValidation {
+            margin-top: 30px
+        }
+    </style>
+
+</head>
+<body class="account-page">
+
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+        <div class="account-content">
+
+            <div class="container">
+
+                <div class="account-box">
+                    <div class="account-wrapper">
+                        <div class="form-group">
+                            <img src="~/Content/assets/img/droidEdgeLogo.png" style="text-align:left" />
+                        </div>
+
+                        <h3 class="account-title" style="text-align:left;color:#b30718"> Sign In</h3>
+                        <p class="account-subtitle" style="text-align:left">to access <a href="#" style="color:#b30718">Vintage Payroll Manager Report Server</a></p>
+                        <p class="toTitle"></p>
+                        <!-- Account Form -->
+                        @*<form asp-controller="Home" asp-action="Login" >*@
+                        <form class="login-form" method="post">
+                            <div class="form-group">
+                                <input id="username" class="form-control" type="text" placeholder="username">
+                            </div>
+                            <div class="form-group">
+                                <input id="password" class="form-control" type="password" placeholder="password">
+                            </div>
+                            @*<div class="form-group form-focus select-focus mb-0">
+                                    <select class="select floating" style="width:100%">
+                                        <option>-</option>
+                                        <option>2019</option>
+                                        <option>2018</option>
+                                        <option>2017</option>
+                                        <option>2016</option>
+                                        <option>2015</option>
+                                    </select>
+                                    <label class="focus-label">Branch</label>
+                                </div>*@
+                            <div class="form-group text-center">
+                                <button id="loginBtn" class="btn btn-primary account-btn" style="background-color:#b30718" type="submit">Login</button>
+                            </div>
+                            @*<div class="account-footer">
+                                <p>forgot password? <a href="#" style="color:#b30718">Click Here</a></p>
+                            </div>*@
+                        </form>
+                        <!-- /Account Form -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Main Wrapper -->
+    <!-- jQuery -->
+    <script src="~/Content/assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="~/Content/assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="~/Content/assets/js/app.js"></script>
+
+    <script src="~/Content/assets/js/jquery-3.6.0.min.js"></script>
+
+
+    <!-- Slimscroll JS -->
+    <script src="~/Content/assets/js/jquery.slimscroll.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="~/Content/assets/js/select2.min.js"></script>
+
+
+    <script>
+        rootUrl = '@Url.Content("~")';
+
+        function checkIfNull(value) {
+            return (value == "" || value == null || value == undefined) ? true : false;
+        }
+
+        $('.login-form').submit(function () {
+            e.preventDefault();
+            return false;
+        });
+
+        $('#loginBtn').click(function (e) {
+            e.preventDefault()
+            $('.loginValidation').remove()
+
+            var appendTo = '';
+            var username = $("#username").val();
+            var password = $("#password").val();
+            if (checkIfNull(username) || checkIfNull(password)) {
+                appendTo = '<span class="alert alert-danger loginValidation" style="display: flex; margin-top: 20pt">Please enter your valid credentials.</span>'
+                $('.toTitle').after(appendTo);
+                return;
+            }
+            var token = '@Html.AntiForgeryToken()';
+            var values = JSON.stringify({ "Username": username, "Password": password })
+
+
+            disableButtons();
+            enableButtons();
+            document.location.assign("@Url.Action("Dashboard","Home")");
+
+
+        });
+
+        $('#resetPwd').click(function (e) {
+            e.preventDefault();
+            $('.validator').remove()
+            var appendTo = "";
+            var username = $("#usernameReset").val();
+            if (username == "" || username == null) {
+                appendTo = '<br><br><span class="alert alert-danger validator">Please enter your username.</span>'
+                $('.toApp').append(appendTo);
+                return;
+            }
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                url: rootUrl + '/Account/PassswordReset',
+                data: { "username": username },
+                success: function (result) {
+                    if ((result != null) && (result != undefined) && (result.Status == "Success")) {
+                        appendTo = '<br><br><span class="alert alert-success validator">Your new password has been sent to your email.</span>'
+                        $('.toApp').append(appendTo)
+                        $("#usernameReset").val("")
+                    }
+                    else {
+                        appendTo = '<br><br><span class="alert alert-danger validator">Please enter a valid username.</span>'
+                        $('.toApp').append(appendTo)
+                    };
+                },
+                error: function () {
+                    console.log(result)
+                }
+            });
+        })
+
+        function goToHome() {
+            document.location.assign("@Url.Action("Index","Home")");
+        }
+        function enableButtons() {
+            $("#loginBtn").removeClass("disabled").html('Log In');
+        }
+
+        function disableButtons() {
+            $("#loginBtn").addClass("disabled").html('Logging in... <i class="fa fa-spinner fa-spin"></i>');
+        }
+    </script>
+
+
+</body>
+</html>

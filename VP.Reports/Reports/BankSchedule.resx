@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="customSqlQuery1.Sql" xml:space="preserve">
+    <value>Select     dbo.YearPayAnalysis.Company, dbo.YearPayAnalysis.Branch,
+	dbo.YearPayAnalysis.EmployeeID, dbo.YearPayAnalysis.PayTypeID, dbo.YearPayAnalysis.AttrID, 
+	dbo.YearPayAnalysis.Tran_Date, dbo.YearPayAnalysis.Amount, dbo.YearPayAnalysis.PayTypeBalance, 
+	dbo.YearPayAnalysis.PayTypeDescription, dbo.YearPayAnalysis.Taxable, dbo.YearPayAnalysis.ActiveYN, 
+	dbo.YearPayAnalysis.ExactAmount, dbo.YearPayAnalysis.OnPayroll, dbo.YearPayAnalysis.Rate, 
+	dbo.YearPayAnalysis.Units, dbo.YearPayAnalysis.GLAccount, dbo.Employees.EmployeeUserName, 
+	dbo.Employees.EmployeeName,dbo.Employees.EmployeeFirstName,dbo.Employees.EmployeeOthername, dbo.Employees.CurrencyID, dbo.Banks.BankID, dbo.Banks.BankName, 
+	dbo.Banks.BankAddress1, dbo.Banks.BankAddress2, dbo.Banks.BankCity, dbo.Banks.BankState, dbo.Banks.BankCountry, 
+	dbo.Banks.ChequeDate, dbo.Banks.ChequeNo, dbo.Banks.First_Sign, dbo.Banks.Second_Sign, dbo.Banks.First_Design, 
+	dbo.Banks.Second_Design, dbo.CostCenter.CostCenterID, dbo.CostCenter.Description, 
+	dbo.Groups.GroupID, dbo.Groups.GroupDescription, dbo.Locations.LocationID, 
+	dbo.Locations.Description AS LocationDescription, dbo.Department.DepartmentID, 
+	dbo.Department.DepartmentDescription, dbo.YearEmployeePayAnalysis.AccountNo, 
+	dbo.YearEmployeePayAnalysis.PFAID, dbo.YearEmployeePayAnalysis.PFANo, dbo.YearEmployeePayAnalysis.SalaryPaid, 
+	dbo.YearEmployeePayAnalysis.ActiveYN AS ActiveYND, dbo.YearEmployeePayAnalysis.StatePAYE, 
+	dbo.YearEmployeePayAnalysis.DesignationID, dbo.YearEmployeePayAnalysis.ContractTypeID, dbo.YearEmployeePayAnalysis.StatusID, 
+	dbo.YearEmployeePayAnalysis.JobClassID, dbo.YearEmployeePayAnalysis.EmployeeActivityTypeID, dbo.CurrencyTypes.CurrencyType, 
+	dbo.CurrencyTypes.CurrencyExchangeRate,
+	CASE WHEN YearPayAnalysis.AttrID='P' THEN YearPayAnalysis.Amount ELSE 0 END AS Payments,
+CASE WHEN YearPayAnalysis.AttrID='D' THEN YearPayAnalysis.Amount ELSE 0 END AS Deduction
+,C.Name, IsNull(C.Address1, '') + ' ' + IsNull(C.Address2, '') + ' ' + IsNull(C.Address3, '') + ' ' + IsNull(C.City, '') + ' ' + IsNull(C.State, '') + ' ' + IsNull(C.Country, '') As CompanyFullAddress,
+      C.LogoURL
+
+
+FROM dbo.YearPayAnalysis 
+INNER JOIN dbo.Company C
+	ON dbo.YearPayAnalysis.Company = C.Company AND 
+                      dbo.YearPayAnalysis.Branch = C.Branch
+                      
+	INNER JOIN dbo.YearEmployeePayAnalysis 
+	ON dbo.YearPayAnalysis.Company = dbo.YearEmployeePayAnalysis.Company AND 
+                      dbo.YearPayAnalysis.Branch = dbo.YearEmployeePayAnalysis.Branch AND 
+                      dbo.YearPayAnalysis.EmployeeID = dbo.YearEmployeePayAnalysis.EmployeeID AND 
+                      dbo.YearPayAnalysis.Tran_Date = dbo.YearEmployeePayAnalysis.Tran_Date 
+	INNER JOIN dbo.Employees 
+	ON dbo.YearEmployeePayAnalysis.Company = dbo.Employees.Company AND 
+                      dbo.YearEmployeePayAnalysis.Branch = dbo.Employees.Branch AND  
+                      dbo.YearEmployeePayAnalysis.EmployeeID = dbo.Employees.EmployeeID 
+					  
+	INNER JOIN dbo.Locations 
+	ON dbo.YearEmployeePayAnalysis.Company = dbo.Locations.Company AND 
+                      dbo.YearEmployeePayAnalysis.Branch = dbo.Locations.Branch AND 
+                      dbo.YearEmployeePayAnalysis.Location = dbo.Locations.LocationID 
+	
+	LEFT OUTER JOIN dbo.CurrencyTypes 			  
+		ON dbo.Employees.Company = dbo.CurrencyTypes.Company AND 
+                      dbo.Employees.Branch = dbo.CurrencyTypes.Branch AND  
+                      dbo.Employees.CurrencyID = dbo.CurrencyTypes.CurrencyID 
+					  
+	LEFT OUTER JOIN dbo.Department 
+	ON dbo.YearEmployeePayAnalysis.Company = dbo.Department.Company AND 
+                      dbo.YearEmployeePayAnalysis.Branch = dbo.Department.Branch AND 
+                      dbo.YearEmployeePayAnalysis.Department = dbo.Department.DepartmentID 
+					  
+	LEFT OUTER JOIN dbo.Groups 
+	ON dbo.YearEmployeePayAnalysis.Company = dbo.Groups.Company AND 
+                      dbo.YearEmployeePayAnalysis.Branch = dbo.Groups.Branch AND 
+                      dbo.YearEmployeePayAnalysis.GroupID = dbo.Groups.GroupID 
+					  
+	LEFT OUTER JOIN dbo.CostCenter 
+	ON dbo.YearEmployeePayAnalysis.Company = dbo.CostCenter.Company AND 
+                      dbo.YearEmployeePayAnalysis.Branch = dbo.CostCenter.Branch AND  
+                      dbo.YearEmployeePayAnalysis.CostCenter = dbo.CostCenter.CostCenterID 
+					  
+	LEFT OUTER JOIN dbo.Banks 
+	ON dbo.YearEmployeePayAnalysis.Company = dbo.Banks.Company AND 
+                      dbo.YearEmployeePayAnalysis.Branch = dbo.Banks.Branch AND 
+                      dbo.YearEmployeePayAnalysis.BankID = dbo.Banks.BankID
+
+WHERE --YearPayAnalysis.Company= @Company 
+--AND YearPayAnalysis.Branch=@Branch 
+--AND 
+(Month(YearPayAnalysis.Tran_Date)=Month(@Period) 
+AND Year(YearPayAnalysis.Tran_Date)=Year(@Period))  and
+YearPayAnalysis.ActiveYN=1 and 
+YearPayAnalysis.OnPayroll=1 and
+(YearEmployeePayAnalysis.ActiveYN=1 Or YearEmployeePayAnalysis.ActiveYN=0)
+</value>
+  </data>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iQ29tcGFueSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJCcmFuY2giIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRW1wbG95ZWVJRCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQYXlUeXBlSUQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQXR0cklEIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRyYW5fRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkFtb3VudCIgVHlwZT0iRG91YmxlIiAvPjxGaWVsZCBOYW1lPSJQYXlUeXBlQmFsYW5jZSIgVHlwZT0iRG91YmxlIiAvPjxGaWVsZCBOYW1lPSJQYXlUeXBlRGVzY3JpcHRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVGF4YWJsZSIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iQWN0aXZlWU4iIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IkV4YWN0QW1vdW50IiBUeXBlPSJEb3VibGUiIC8+PEZpZWxkIE5hbWU9Ik9uUGF5cm9sbCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iUmF0ZSIgVHlwZT0iRG91YmxlIiAvPjxGaWVsZCBOYW1lPSJVbml0cyIgVHlwZT0iRG91YmxlIiAvPjxGaWVsZCBOYW1lPSJHTEFjY291bnQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRW1wbG95ZWVVc2VyTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJFbXBsb3llZU5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRW1wbG95ZWVGaXJzdE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRW1wbG95ZWVPdGhlcm5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ3VycmVuY3lJRCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJCYW5rSUQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQmFua05hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQmFua0FkZHJlc3MxIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkJhbmtBZGRyZXNzMiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJCYW5rQ2l0eSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJCYW5rU3RhdGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQmFua0NvdW50cnkiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ2hlcXVlRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkNoZXF1ZU5vIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkZpcnN0X1NpZ24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU2Vjb25kX1NpZ24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRmlyc3RfRGVzaWduIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNlY29uZF9EZXNpZ24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29zdENlbnRlcklEIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRlc2NyaXB0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ikdyb3VwSUQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iR3JvdXBEZXNjcmlwdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJMb2NhdGlvbklEIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkxvY2F0aW9uRGVzY3JpcHRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGVwYXJ0bWVudElEIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRlcGFydG1lbnREZXNjcmlwdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBY2NvdW50Tm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUEZBSUQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUEZBTm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU2FsYXJ5UGFpZCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iQWN0aXZlWU5EIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJTdGF0ZVBBWUUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGVzaWduYXRpb25JRCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb250cmFjdFR5cGVJRCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTdGF0dXNJRCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJKb2JDbGFzc0lEIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkVtcGxveWVlQWN0aXZpdHlUeXBlSUQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ3VycmVuY3lUeXBlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkN1cnJlbmN5RXhjaGFuZ2VSYXRlIiBUeXBlPSJEb3VibGUiIC8+PEZpZWxkIE5hbWU9IlBheW1lbnRzIiBUeXBlPSJEb3VibGUiIC8+PEZpZWxkIE5hbWU9IkRlZHVjdGlvbiIgVHlwZT0iRG91YmxlIiAvPjxGaWVsZCBOYW1lPSJOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNvbXBhbnlGdWxsQWRkcmVzcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJMb2dvVVJMIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
+  </data>
+</root>

@@ -1,0 +1,864 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD94A218-995F-41F2-B860-09AA743E773B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VP.Reports</RootNamespace>
+    <AssemblyName>VP.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="DevExpress.Data.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.Mvc5.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.2.Web, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.2.Web.WebForms, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.Resources.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v20.2.Core, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebMatrix.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.3.2.3\lib\net45\WebMatrix.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\NWind.mdf" />
+    <Content Include="App_Data\NWind_log.ldf">
+      <DependentUpon>NWind.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\css\devextreme\bootstrap.css" />
+    <Content Include="Content\css\devextreme\bootstrap.min.css" />
+    <Content Include="Content\css\devextreme\dx-diagram.css" />
+    <Content Include="Content\css\devextreme\dx-diagram.min.css" />
+    <Content Include="Content\css\devextreme\dx-gantt.css" />
+    <Content Include="Content\css\devextreme\dx-gantt.min.css" />
+    <Content Include="Content\css\devextreme\dx.carmine.compact.css" />
+    <Content Include="Content\css\devextreme\dx.carmine.css" />
+    <Content Include="Content\css\devextreme\dx.common.css" />
+    <Content Include="Content\css\devextreme\dx.contrast.compact.css" />
+    <Content Include="Content\css\devextreme\dx.contrast.css" />
+    <Content Include="Content\css\devextreme\dx.dark.compact.css" />
+    <Content Include="Content\css\devextreme\dx.dark.css" />
+    <Content Include="Content\css\devextreme\dx.darkmoon.compact.css" />
+    <Content Include="Content\css\devextreme\dx.darkmoon.css" />
+    <Content Include="Content\css\devextreme\dx.darkviolet.compact.css" />
+    <Content Include="Content\css\devextreme\dx.darkviolet.css" />
+    <Content Include="Content\css\devextreme\dx.greenmist.compact.css" />
+    <Content Include="Content\css\devextreme\dx.greenmist.css" />
+    <Content Include="Content\css\devextreme\dx.light.compact.css" />
+    <Content Include="Content\css\devextreme\dx.light.css" />
+    <Content Include="Content\css\devextreme\dx.material.blue.dark.compact.css" />
+    <Content Include="Content\css\devextreme\dx.material.blue.dark.css" />
+    <Content Include="Content\css\devextreme\dx.material.blue.light.compact.css" />
+    <Content Include="Content\css\devextreme\dx.material.blue.light.css" />
+    <Content Include="Content\css\devextreme\dx.material.lime.dark.compact.css" />
+    <Content Include="Content\css\devextreme\dx.material.lime.dark.css" />
+    <Content Include="Content\css\devextreme\dx.material.lime.light.compact.css" />
+    <Content Include="Content\css\devextreme\dx.material.lime.light.css" />
+    <Content Include="Content\css\devextreme\dx.material.orange.dark.compact.css" />
+    <Content Include="Content\css\devextreme\dx.material.orange.dark.css" />
+    <Content Include="Content\css\devextreme\dx.material.orange.light.compact.css" />
+    <Content Include="Content\css\devextreme\dx.material.orange.light.css" />
+    <Content Include="Content\css\devextreme\dx.material.purple.dark.compact.css" />
+    <Content Include="Content\css\devextreme\dx.material.purple.dark.css" />
+    <Content Include="Content\css\devextreme\dx.material.purple.light.compact.css" />
+    <Content Include="Content\css\devextreme\dx.material.purple.light.css" />
+    <Content Include="Content\css\devextreme\dx.material.teal.dark.compact.css" />
+    <Content Include="Content\css\devextreme\dx.material.teal.dark.css" />
+    <Content Include="Content\css\devextreme\dx.material.teal.light.compact.css" />
+    <Content Include="Content\css\devextreme\dx.material.teal.light.css" />
+    <Content Include="Content\css\devextreme\dx.softblue.compact.css" />
+    <Content Include="Content\css\devextreme\dx.softblue.css" />
+    <Content Include="Content\css\invoice.min.css" />
+    <Content Include="Content\css\site.css" />
+    <Content Include="Content\css\site.min.css" />
+    <Content Include="Content\css\vertical-layout-light\style.css" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery-ui.min.css" />
+    <Content Include="Content\js\alerts.js" />
+    <Content Include="Content\js\avgrund.js" />
+    <Content Include="Content\js\bt-maxLength.js" />
+    <Content Include="Content\js\c3.js" />
+    <Content Include="Content\js\calendar.js" />
+    <Content Include="Content\js\chart.js" />
+    <Content Include="Content\js\Chart.roundedBarCharts.js" />
+    <Content Include="Content\js\chartist.js" />
+    <Content Include="Content\js\clipboard.js" />
+    <Content Include="Content\js\codeEditor.js" />
+    <Content Include="Content\js\context-menu.js" />
+    <Content Include="Content\js\dashboard.js" />
+    <Content Include="Content\js\data-table.js" />
+    <Content Include="Content\js\db.js" />
+    <Content Include="Content\js\desktop-notification.js" />
+    <Content Include="Content\js\devextreme\aspnet\dx.aspnet.data.js" />
+    <Content Include="Content\js\devextreme\aspnet\dx.aspnet.mvc.js" />
+    <Content Include="Content\js\devextreme\bootstrap.js" />
+    <Content Include="Content\js\devextreme\bootstrap.min.js" />
+    <Content Include="Content\js\devextreme\cldr.js" />
+    <Content Include="Content\js\devextreme\cldr.min.js" />
+    <Content Include="Content\js\devextreme\cldr\event.js" />
+    <Content Include="Content\js\devextreme\cldr\event.min.js" />
+    <Content Include="Content\js\devextreme\cldr\supplemental.js" />
+    <Content Include="Content\js\devextreme\cldr\supplemental.min.js" />
+    <Content Include="Content\js\devextreme\cldr\unresolved.js" />
+    <Content Include="Content\js\devextreme\cldr\unresolved.min.js" />
+    <Content Include="Content\js\devextreme\dx-diagram.js" />
+    <Content Include="Content\js\devextreme\dx-diagram.min.js" />
+    <Content Include="Content\js\devextreme\dx-gantt.js" />
+    <Content Include="Content\js\devextreme\dx-gantt.min.js" />
+    <Content Include="Content\js\devextreme\dx.all.debug.js" />
+    <Content Include="Content\js\devextreme\dx.all.js" />
+    <Content Include="Content\js\devextreme\dx.viz.debug.js" />
+    <Content Include="Content\js\devextreme\dx.viz.js" />
+    <Content Include="Content\js\devextreme\dx.web.debug.js" />
+    <Content Include="Content\js\devextreme\dx.web.js" />
+    <Content Include="Content\js\devextreme\globalize.js" />
+    <Content Include="Content\js\devextreme\globalize.min.js" />
+    <Content Include="Content\js\devextreme\globalize\currency.js" />
+    <Content Include="Content\js\devextreme\globalize\currency.min.js" />
+    <Content Include="Content\js\devextreme\globalize\date.js" />
+    <Content Include="Content\js\devextreme\globalize\date.min.js" />
+    <Content Include="Content\js\devextreme\globalize\message.js" />
+    <Content Include="Content\js\devextreme\globalize\message.min.js" />
+    <Content Include="Content\js\devextreme\globalize\number.js" />
+    <Content Include="Content\js\devextreme\globalize\number.min.js" />
+    <Content Include="Content\js\devextreme\jquery.js" />
+    <Content Include="Content\js\devextreme\jquery.min.js" />
+    <Content Include="Content\js\devextreme\jszip.js" />
+    <Content Include="Content\js\devextreme\jszip.min.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.cs.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.de.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.el.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.en.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.es.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.fi.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.fr.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.hu.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.it.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.ja.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.nl.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.pt.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.ru.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.sl.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.sv.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.tr.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.vi.js" />
+    <Content Include="Content\js\devextreme\localization\dx.messages.zh.js" />
+    <Content Include="Content\js\devextreme\vectormap-data\africa.js" />
+    <Content Include="Content\js\devextreme\vectormap-data\canada.js" />
+    <Content Include="Content\js\devextreme\vectormap-data\eurasia.js" />
+    <Content Include="Content\js\devextreme\vectormap-data\europe.js" />
+    <Content Include="Content\js\devextreme\vectormap-data\usa.js" />
+    <Content Include="Content\js\devextreme\vectormap-data\world.js" />
+    <Content Include="Content\js\devextreme\vectormap-utils\dx.vectormaputils.debug.js" />
+    <Content Include="Content\js\devextreme\vectormap-utils\dx.vectormaputils.js" />
+    <Content Include="Content\js\devextreme\vectormap-utils\dx.vectormaputils.node.js" />
+    <Content Include="Content\js\dragula.js" />
+    <Content Include="Content\js\dropify.js" />
+    <Content Include="Content\js\dropzone.js" />
+    <Content Include="Content\js\editorDemo.js" />
+    <Content Include="Content\js\file-upload.js" />
+    <Content Include="Content\js\flot-chart.js" />
+    <Content Include="Content\js\form-addons.js" />
+    <Content Include="Content\js\form-repeater.js" />
+    <Content Include="Content\js\form-validation.js" />
+    <Content Include="Content\js\formpickers.js" />
+    <Content Include="Content\js\google-charts.js" />
+    <Content Include="Content\js\google-maps.js" />
+    <Content Include="Content\js\hoverable-collapse.js" />
+    <Content Include="Content\js\inputmask.js" />
+    <Content Include="Content\js\invoice-template.min.js" />
+    <Content Include="Content\js\ion-range-slider.js" />
+    <Content Include="Content\js\jq.tablesort.js" />
+    <Content Include="Content\js\jquery-file-upload.js" />
+    <Content Include="Content\js\jquery.cookie.js" />
+    <Content Include="Content\js\js-grid.js" />
+    <Content Include="Content\js\just-gage.js" />
+    <Content Include="Content\js\light-gallery.js" />
+    <Content Include="Content\js\mapael.js" />
+    <Content Include="Content\js\mapael_example_1.js" />
+    <Content Include="Content\js\mapael_example_2.js" />
+    <Content Include="Content\js\maps.js" />
+    <Content Include="Content\js\modal-demo.js" />
+    <Content Include="Content\js\morris.js" />
+    <Content Include="Content\js\no-ui-slider.js" />
+    <Content Include="Content\js\off-canvas.js" />
+    <Content Include="Content\js\owl-carousel.js" />
+    <Content Include="Content\js\paginate.js" />
+    <Content Include="Content\js\popover.js" />
+    <Content Include="Content\js\profile-demo.js" />
+    <Content Include="Content\js\progress-bar.js" />
+    <Content Include="Content\js\select.dataTables.min.css" />
+    <Content Include="Content\js\select2.js" />
+    <Content Include="Content\js\settings.js" />
+    <Content Include="Content\js\site.js" />
+    <Content Include="Content\js\site.min.js" />
+    <Content Include="Content\js\sparkline.js" />
+    <Content Include="Content\js\tablesorter.js" />
+    <Content Include="Content\js\tabs.js" />
+    <Content Include="Content\js\template.js" />
+    <Content Include="Content\js\tight-grid.js" />
+    <Content Include="Content\js\toastDemo.js" />
+    <Content Include="Content\js\todolist.js" />
+    <Content Include="Content\js\tooltips.js" />
+    <Content Include="Content\js\typeahead.js" />
+    <Content Include="Content\js\wizard.js" />
+    <Content Include="Content\js\x-editable.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\vendors\ace-builds\src-min\ace.js" />
+    <Content Include="Content\vendors\ace-builds\src-min\mode-javascript.js" />
+    <Content Include="Content\vendors\ace-builds\src-min\theme-chaos.js" />
+    <Content Include="Content\vendors\bootstrap-datepicker\bootstrap-datepicker.min.css" />
+    <Content Include="Content\vendors\bootstrap-datepicker\bootstrap-datepicker.min.js" />
+    <Content Include="Content\vendors\bootstrap-maxlength\bootstrap-maxlength.min.js" />
+    <Content Include="Content\vendors\c3\c3.js" />
+    <Content Include="Content\vendors\c3\c3.min.css" />
+    <Content Include="Content\vendors\chart.js\Chart.min.js" />
+    <Content Include="Content\vendors\chartist\chartist.min.css" />
+    <Content Include="Content\vendors\chartist\chartist.min.js" />
+    <Content Include="Content\vendors\clipboard\clipboard.min.js" />
+    <Content Include="Content\vendors\codemirror\ambiance.css" />
+    <Content Include="Content\vendors\codemirror\codemirror.css" />
+    <Content Include="Content\vendors\codemirror\codemirror.js" />
+    <Content Include="Content\vendors\codemirror\javascript.js" />
+    <Content Include="Content\vendors\codemirror\shell.js" />
+    <Content Include="Content\vendors\colcade\colcade.js" />
+    <Content Include="Content\vendors\css\vendor.bundle.base.css" />
+    <Content Include="Content\vendors\d3\d3.min.js" />
+    <Content Include="Content\vendors\datatables.net-bs4\dataTables.bootstrap4.css" />
+    <Content Include="Content\vendors\datatables.net-bs4\dataTables.bootstrap4.js" />
+    <Content Include="Content\vendors\datatables.net\jquery.dataTables.js" />
+    <Content Include="Content\vendors\dragula\dragula.min.css" />
+    <Content Include="Content\vendors\dragula\dragula.min.js" />
+    <Content Include="Content\vendors\dropify\dropify.min.css" />
+    <Content Include="Content\vendors\dropify\dropify.min.js" />
+    <Content Include="Content\vendors\dropzone\dropzone.css" />
+    <Content Include="Content\vendors\dropzone\dropzone.js" />
+    <Content Include="Content\vendors\feather\feather.css" />
+    <Content Include="Content\vendors\feather\fonts\feather-webfont.svg" />
+    <Content Include="Content\vendors\flag-icon-css\css\flag-icon.min.css" />
+    <Content Include="Content\vendors\flot\jquery.flot.categories.js" />
+    <Content Include="Content\vendors\flot\jquery.flot.fillbetween.js" />
+    <Content Include="Content\vendors\flot\jquery.flot.js" />
+    <Content Include="Content\vendors\flot\jquery.flot.pie.js" />
+    <Content Include="Content\vendors\flot\jquery.flot.resize.js" />
+    <Content Include="Content\vendors\flot\jquery.flot.stack.js" />
+    <Content Include="Content\vendors\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\vendors\fullcalendar\fullcalendar.min.css" />
+    <Content Include="Content\vendors\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Content\vendors\img\clear.html" />
+    <Content Include="Content\vendors\img\loading.html" />
+    <Content Include="Content\vendors\inputmask\jquery.inputmask.bundle.js" />
+    <Content Include="Content\vendors\ion-rangeslider\css\ion.rangeSlider.css" />
+    <Content Include="Content\vendors\ion-rangeslider\js\ion.rangeSlider.min.js" />
+    <Content Include="Content\vendors\jquery-asColorPicker\css\asColorPicker.min.css" />
+    <Content Include="Content\vendors\jquery-asColorPicker\images\alpha.png" />
+    <Content Include="Content\vendors\jquery-asColorPicker\images\hue.png" />
+    <Content Include="Content\vendors\jquery-asColorPicker\images\saturation.png" />
+    <Content Include="Content\vendors\jquery-asColorPicker\images\transparent.png" />
+    <Content Include="Content\vendors\jquery-asColorPicker\jquery-asColorPicker.min.js" />
+    <Content Include="Content\vendors\jquery-asColor\jquery-asColor.min.js" />
+    <Content Include="Content\vendors\jquery-asGradient\jquery-asGradient.min.js" />
+    <Content Include="Content\vendors\jquery-bar-rating\bars-1to10.css" />
+    <Content Include="Content\vendors\jquery-bar-rating\bars-horizontal.css" />
+    <Content Include="Content\vendors\jquery-bar-rating\bars-movie.css" />
+    <Content Include="Content\vendors\jquery-bar-rating\bars-pill.css" />
+    <Content Include="Content\vendors\jquery-bar-rating\bars-reversed.css" />
+    <Content Include="Content\vendors\jquery-bar-rating\bars-square.css" />
+    <Content Include="Content\vendors\jquery-bar-rating\bootstrap-stars.css" />
+    <Content Include="Content\vendors\jquery-bar-rating\css-stars.css" />
+    <Content Include="Content\vendors\jquery-bar-rating\examples.css" />
+    <Content Include="Content\vendors\jquery-bar-rating\fontawesome-stars-o.css" />
+    <Content Include="Content\vendors\jquery-bar-rating\fontawesome-stars.css" />
+    <Content Include="Content\vendors\jquery-bar-rating\jquery.barrating.min.js" />
+    <Content Include="Content\vendors\jquery-contextmenu\font\context-menu-icons0a26-2.html" />
+    <Content Include="Content\vendors\jquery-contextmenu\font\context-menu-icons0a26-3.html" />
+    <Content Include="Content\vendors\jquery-contextmenu\font\context-menu-icons0a26-4.html" />
+    <Content Include="Content\vendors\jquery-contextmenu\font\context-menu-icons0a26.html" />
+    <Content Include="Content\vendors\jquery-contextmenu\jquery.contextMenu.min.css" />
+    <Content Include="Content\vendors\jquery-contextmenu\jquery.contextMenu.min.js" />
+    <Content Include="Content\vendors\jquery-file-upload\jquery.uploadfile.min.js" />
+    <Content Include="Content\vendors\jquery-file-upload\uploadfile.css" />
+    <Content Include="Content\vendors\jquery-mapael\france_departments.min.js" />
+    <Content Include="Content\vendors\jquery-mapael\jquery.mapael.min.js" />
+    <Content Include="Content\vendors\jquery-mapael\usa_states.min.js" />
+    <Content Include="Content\vendors\jquery-mapael\world_countries.min.js" />
+    <Content Include="Content\vendors\jquery-sparkline\jquery.sparkline.min.js" />
+    <Content Include="Content\vendors\jquery-steps\jquery.steps.min.js" />
+    <Content Include="Content\vendors\jquery-tags-input\jquery.tagsinput.min.css" />
+    <Content Include="Content\vendors\jquery-tags-input\jquery.tagsinput.min.js" />
+    <Content Include="Content\vendors\jquery-toast-plugin\jquery.toast.min.css" />
+    <Content Include="Content\vendors\jquery-toast-plugin\jquery.toast.min.js" />
+    <Content Include="Content\vendors\jquery-validation\jquery.validate.min.js" />
+    <Content Include="Content\vendors\jquery.avgrund\jquery.avgrund.min.js" />
+    <Content Include="Content\vendors\jquery.repeater\jquery.repeater.min.js" />
+    <Content Include="Content\vendors\jsgrid\jsgrid-theme.min.css" />
+    <Content Include="Content\vendors\jsgrid\jsgrid.min.css" />
+    <Content Include="Content\vendors\jsgrid\jsgrid.min.js" />
+    <Content Include="Content\vendors\js\vendor.bundle.base.js" />
+    <Content Include="Content\vendors\justgage\justgage.js" />
+    <Content Include="Content\vendors\justgage\raphael-2.1.4.min.js" />
+    <Content Include="Content\vendors\jvectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Content\vendors\jvectormap\jquery-jvectormap.css" />
+    <Content Include="Content\vendors\jvectormap\jquery-jvectormap.min.js" />
+    <Content Include="Content\vendors\lightgallery\css\lightgallery.css" />
+    <Content Include="Content\vendors\lightgallery\img\loading.gif" />
+    <Content Include="Content\vendors\lightgallery\img\video-play.png" />
+    <Content Include="Content\vendors\lightgallery\img\vimeo-play.png" />
+    <Content Include="Content\vendors\lightgallery\img\youtube-play.png" />
+    <Content Include="Content\vendors\lightgallery\js\lightgallery-all.min.js" />
+    <Content Include="Content\vendors\mdi\css\materialdesignicons.min.css" />
+    <Content Include="Content\vendors\moment\moment.min.js" />
+    <Content Include="Content\vendors\morris.js\morris.css" />
+    <Content Include="Content\vendors\morris.js\morris.min.js" />
+    <Content Include="Content\vendors\nouislider\nouislider.min.css" />
+    <Content Include="Content\vendors\nouislider\nouislider.min.js" />
+    <Content Include="Content\vendors\owl-carousel-2\owl.carousel.min.css" />
+    <Content Include="Content\vendors\owl-carousel-2\owl.carousel.min.js" />
+    <Content Include="Content\vendors\owl-carousel-2\owl.theme.default.min.css" />
+    <Content Include="Content\vendors\owl-carousel-2\owl.video.play.png" />
+    <Content Include="Content\vendors\progressbar.js\progressbar.min.js" />
+    <Content Include="Content\vendors\quill\quill.min.js" />
+    <Content Include="Content\vendors\quill\quill.snow.css" />
+    <Content Include="Content\vendors\raphael\raphael.min.js" />
+    <Content Include="Content\vendors\select2-bootstrap-theme\select2-bootstrap.min.css" />
+    <Content Include="Content\vendors\select2\select2.min.css" />
+    <Content Include="Content\vendors\select2\select2.min.js" />
+    <Content Include="Content\vendors\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="Content\vendors\simplemde\simplemde.min.css" />
+    <Content Include="Content\vendors\simplemde\simplemde.min.js" />
+    <Content Include="Content\vendors\summernote\dist\summernote-lite.html" />
+    <Content Include="Content\vendors\summernote\dist\summernote-lite.min.html" />
+    <Content Include="Content\vendors\sweetalert\sweetalert.min.js" />
+    <Content Include="Content\vendors\tempusdominus-bootstrap-4\tempusdominus-bootstrap-4.js" />
+    <Content Include="Content\vendors\tempusdominus-bootstrap-4\tempusdominus-bootstrap-4.min.css" />
+    <Content Include="Content\vendors\ti-icons\css\themify-icons.css" />
+    <Content Include="Content\vendors\tinymce\tinymce.min.js" />
+    <Content Include="Content\vendors\typeahead.js\typeahead.bundle.min.js" />
+    <Content Include="Content\vendors\typicons\typicons.css" />
+    <Content Include="Content\vendors\typicons\typicons2471.svg" />
+    <Content Include="Content\vendors\x-editable\bootstrap-editable.css" />
+    <Content Include="Content\vendors\x-editable\bootstrap-editable.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\ace.js" />
+    <Content Include="Scripts\additional-methods.js" />
+    <Content Include="Scripts\additional-methods.min.js" />
+    <Content Include="Scripts\cldr.event.js" />
+    <Content Include="Scripts\cldr.js" />
+    <Content Include="Scripts\cldr.supplemental.js" />
+    <Content Include="Scripts\cldr.unresolved.js" />
+    <Content Include="Scripts\ext-language_tools.js" />
+    <Content Include="Scripts\globalize.currency.js" />
+    <Content Include="Scripts\globalize.date.js" />
+    <Content Include="Scripts\globalize.js" />
+    <Content Include="Scripts\globalize.message.js" />
+    <Content Include="Scripts\globalize.number.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-3.3.0.debug.js" />
+    <Content Include="Scripts\knockout-3.3.0.js" />
+    <Content Include="App_Data\nwind.json" />
+    <Content Include="Content\css\devextreme\fonts\Roboto-300.ttf" />
+    <Content Include="Content\css\devextreme\fonts\Roboto-300.woff" />
+    <Content Include="Content\css\devextreme\fonts\Roboto-300.woff2" />
+    <Content Include="Content\css\devextreme\fonts\Roboto-400.ttf" />
+    <Content Include="Content\css\devextreme\fonts\Roboto-400.woff" />
+    <Content Include="Content\css\devextreme\fonts\Roboto-400.woff2" />
+    <Content Include="Content\css\devextreme\fonts\Roboto-500.ttf" />
+    <Content Include="Content\css\devextreme\fonts\Roboto-500.woff" />
+    <Content Include="Content\css\devextreme\fonts\Roboto-500.woff2" />
+    <Content Include="Content\css\devextreme\fonts\Roboto-700.ttf" />
+    <Content Include="Content\css\devextreme\fonts\Roboto-700.woff" />
+    <Content Include="Content\css\devextreme\fonts\Roboto-700.woff2" />
+    <Content Include="Content\css\devextreme\icons\dxicons.ttf" />
+    <Content Include="Content\css\devextreme\icons\dxicons.woff" />
+    <Content Include="Content\css\devextreme\icons\dxicons.woff2" />
+    <Content Include="Content\css\devextreme\icons\dxiconsmaterial.ttf" />
+    <Content Include="Content\css\devextreme\icons\dxiconsmaterial.woff" />
+    <Content Include="Content\css\devextreme\icons\dxiconsmaterial.woff2" />
+    <Content Include="Content\vendors\feather\fonts\feather-webfont.eot" />
+    <Content Include="Content\vendors\feather\fonts\feather-webfont.ttf" />
+    <Content Include="Content\vendors\feather\fonts\feather-webfont.woff" />
+    <Content Include="Content\vendors\feather\fonts\feather-webfontd41d.eot" />
+    <Content Include="Content\vendors\typicons\typicons2471.ttf" />
+    <Content Include="Content\vendors\typicons\typicons2471.woff" />
+    <Content Include="Content\vendors\typicons\typicons2471.woff2" />
+    <Content Include="Content\vendors\typicons\typiconsc70e.eot" />
+    <None Include="packages.config" />
+    <Content Include="Reports\Report.repx" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Views\Shared\DisplayTemplates\Boolean.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Boolean.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Decimal.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\MultilineText.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Password.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\String.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\EmailAddress.cshtml" />
+    <Content Include="Views\Reports\Payslip.cshtml" />
+    <Content Include="Views\Reports\PayAnalysis.cshtml" />
+    <Content Include="Views\Reports\BankSchedule.cshtml" />
+    <Content Include="Views\Reports\PayJournal.cshtml" />
+    <Content Include="Views\Reports\Payee.cshtml" />
+    <Content Include="Views\Reports\Pension.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VPReportsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VPReportsModel.edmx</DependentUpon>
+      <LastGenOutput>VPReportsModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="VPReportsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VPReportsModel.edmx</DependentUpon>
+      <LastGenOutput>VPReportsModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Designer.cshtml" />
+    <Content Include="Views\Home\Viewer.cshtml" />
+    <Content Include="Scripts\jquery.min.map" />
+    <Content Include="Views\Home\Dashboard.cshtml" />
+    <EntityDeploy Include="VPReportsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VPReportsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="VPReportsModel.edmx.diagram">
+      <DependentUpon>VPReportsModel.edmx</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Absenteeism.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AbsenteeismHistory.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AllowanceRelief.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApiToken.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Bank.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Branch.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Company.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyPolicy.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="CostCenter.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CourseType.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyType.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDesignation.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeFinancial.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeLeaf.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeMonthlyPay.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeePFA.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeePFALine.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeQualification.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gender.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GradeType.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Group.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GroupsLeave.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GroupsLine.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobCategory.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobCategoryLine.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Language.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveType.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Location.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaritalStatu.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReportDesignerModel.cs" />
+    <Compile Include="Models\StatusMessage.cs" />
+    <Compile Include="NextOfKin.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayAnalysi.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayElementsView.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentBasi.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentType.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentTypeAttr.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayOperator.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollPeriod.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayrollPeriodLine.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayTypesLine.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayTypeStatu.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PFA.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PredefinedReports\TestReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QualificationType.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Referee.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RelationshipType.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReliefType.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PayAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PayrollJournal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StaffPaySlip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pension.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Payee.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PaySlip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BankSchedule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleAccessPermission.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleAccessPermissionView.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Services\CustomDocumentOperationService.cs" />
+    <Compile Include="StandardRelief.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="State.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxTable.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaxTableLine.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Title.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VPReportsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VPReportsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VPReportsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VPReportsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VPReportsModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkExperience.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YearEmployeePayAnalysi.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YearPayAnalysi.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YearPayFileTaxLine.cs">
+      <DependentUpon>VPReportsModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\BankSchedule.resx">
+      <DependentUpon>BankSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PayAnalysis.resx">
+      <DependentUpon>PayAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StaffPaySlip.resx">
+      <DependentUpon>StaffPaySlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pension.resx">
+      <DependentUpon>Pension.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PayrollJournal.resx">
+      <DependentUpon>PayrollJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PaySlip.resx">
+      <DependentUpon>PaySlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Payee.resx">
+      <DependentUpon>Payee.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12143</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12143/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

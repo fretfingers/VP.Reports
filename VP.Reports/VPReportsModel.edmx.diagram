@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8e8647405aa24d9fb5ad2e5475cf2541" Name="Diagram1">
+        <EntityTypeShape EntityType="VPModel.Absenteeism" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VPModel.AbsenteeismHistory" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VPModel.AllowanceRelief" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VPModel.ApiToken" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="VPModel.Bank" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VPModel.Branch" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="VPModel.Company" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VPModel.CompanyPolicy" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="VPModel.CostCenter" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VPModel.Country" Width="1.5" PointX="10.75" PointY="4.75" />
+        <EntityTypeShape EntityType="VPModel.CourseType" Width="1.5" PointX="4.75" PointY="10.75" />
+        <EntityTypeShape EntityType="VPModel.CurrencyType" Width="1.5" PointX="10.75" PointY="7.75" />
+        <EntityTypeShape EntityType="VPModel.Department" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VPModel.EmployeeDesignation" Width="1.5" PointX="12.75" PointY="4.75" />
+        <EntityTypeShape EntityType="VPModel.EmployeeFinancial" Width="1.5" PointX="12.75" PointY="7.75" />
+        <EntityTypeShape EntityType="VPModel.EmployeeLeaf" Width="1.5" PointX="4.75" PointY="13.75" />
+        <EntityTypeShape EntityType="VPModel.EmployeeMonthlyPay" Width="1.5" PointX="10.75" PointY="13.75" />
+        <EntityTypeShape EntityType="VPModel.EmployeePFA" Width="1.5" PointX="12.75" PointY="13.75" />
+        <EntityTypeShape EntityType="VPModel.EmployeePFALine" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VPModel.EmployeeQualification" Width="1.5" PointX="14.75" PointY="5.75" />
+        <EntityTypeShape EntityType="VPModel.Employee" Width="1.5" PointX="14.75" PointY="12.75" />
+        <EntityTypeShape EntityType="VPModel.Gender" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VPModel.GradeType" Width="1.5" PointX="16.75" PointY="4.75" />
+        <EntityTypeShape EntityType="VPModel.Group" Width="1.5" PointX="16.75" PointY="7.75" />
+        <EntityTypeShape EntityType="VPModel.GroupsLeave" Width="1.5" PointX="16.75" PointY="12.75" />
+        <EntityTypeShape EntityType="VPModel.GroupsLine" Width="1.5" PointX="16.75" PointY="16.75" />
+        <EntityTypeShape EntityType="VPModel.JobCategory" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VPModel.JobCategoryLine" Width="1.5" PointX="18.75" PointY="3.75" />
+        <EntityTypeShape EntityType="VPModel.Language" Width="1.5" PointX="18.75" PointY="7.75" />
+        <EntityTypeShape EntityType="VPModel.LeaveType" Width="1.5" PointX="18.75" PointY="10.75" />
+        <EntityTypeShape EntityType="VPModel.Location" Width="1.5" PointX="18.75" PointY="15.75" />
+        <EntityTypeShape EntityType="VPModel.MainMenu" Width="1.5" PointX="10.75" PointY="19.75" />
+        <EntityTypeShape EntityType="VPModel.MaritalStatu" Width="1.5" PointX="18.75" PointY="19.75" />
+        <EntityTypeShape EntityType="VPModel.NextOfKin" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VPModel.PayAnalysi" Width="1.5" PointX="0.75" PointY="20.75" />
+        <EntityTypeShape EntityType="VPModel.PaymentBasi" Width="1.5" PointX="20.75" PointY="4.75" />
+        <EntityTypeShape EntityType="VPModel.PaymentTypeAttr" Width="1.5" PointX="20.75" PointY="7.75" />
+        <EntityTypeShape EntityType="VPModel.PaymentType" Width="1.5" PointX="20.75" PointY="10.75" />
+        <EntityTypeShape EntityType="VPModel.PayOperator" Width="1.5" PointX="20.75" PointY="17.75" />
+        <EntityTypeShape EntityType="VPModel.PayrollPeriod" Width="1.5" PointX="20.75" PointY="21.75" />
+        <EntityTypeShape EntityType="VPModel.PayrollPeriodLine" Width="1.5" PointX="22.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VPModel.PayTypesLine" Width="1.5" PointX="22.75" PointY="4.75" />
+        <EntityTypeShape EntityType="VPModel.PayTypeStatu" Width="1.5" PointX="22.75" PointY="9.75" />
+        <EntityTypeShape EntityType="VPModel.PFA" Width="1.5" PointX="22.75" PointY="13.75" />
+        <EntityTypeShape EntityType="VPModel.QualificationType" Width="1.5" PointX="16.75" PointY="22.75" />
+        <EntityTypeShape EntityType="VPModel.Referee" Width="1.5" PointX="22.75" PointY="19.75" />
+        <EntityTypeShape EntityType="VPModel.RelationshipType" Width="1.5" PointX="2.75" PointY="23.75" />
+        <EntityTypeShape EntityType="VPModel.ReliefType" Width="1.5" PointX="4.75" PointY="23.75" />
+        <EntityTypeShape EntityType="VPModel.RoleAccessPermission" Width="1.5" PointX="10.75" PointY="23.75" />
+        <EntityTypeShape EntityType="VPModel.Role" Width="1.5" PointX="24.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VPModel.StandardRelief" Width="1.5" PointX="24.75" PointY="3.75" />
+        <EntityTypeShape EntityType="VPModel.State" Width="1.5" PointX="24.75" PointY="8.75" />
+        <EntityTypeShape EntityType="VPModel.TaxTable" Width="1.5" PointX="24.75" PointY="12.75" />
+        <EntityTypeShape EntityType="VPModel.TaxTableLine" Width="1.5" PointX="24.75" PointY="16.75" />
+        <EntityTypeShape EntityType="VPModel.Title" Width="1.5" PointX="24.75" PointY="21.75" />
+        <EntityTypeShape EntityType="VPModel.User" Width="1.5" PointX="16.75" PointY="25.75" />
+        <EntityTypeShape EntityType="VPModel.WorkExperience" Width="1.5" PointX="22.75" PointY="25.75" />
+        <EntityTypeShape EntityType="VPModel.YearEmployeePayAnalysi" Width="1.5" PointX="24.75" PointY="25.75" />
+        <EntityTypeShape EntityType="VPModel.YearPayAnalysi" Width="1.5" PointX="26.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VPModel.YearPayFileTaxLine" Width="1.5" PointX="26.75" PointY="7.75" />
+        <EntityTypeShape EntityType="VPModel.PayElementsView" Width="1.5" PointX="26.75" PointY="12.75" />
+        <EntityTypeShape EntityType="VPModel.RoleAccessPermissionView" Width="1.5" PointX="26.75" PointY="18.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
